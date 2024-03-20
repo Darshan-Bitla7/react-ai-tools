@@ -1,0 +1,119 @@
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ModelDetails {
+  display: flex;
+  width: 80%;
+  margin: 10% auto;
+  border: 1px solid black;
+  margin-bottom: 0%;
+  /* border-right: 1px solid black; */
+}
+.top {
+  height: 100vh;
+}
+.Model--img {
+  border-right: 1px solid black;
+  width: 150%;
+}
+
+.ModelDetails--image {
+  /* width: 100%; */
+  height: 100%;
+  margin: 0 auto;
+}
+
+.ModelDetails--info {
+  /* border: 2px solid black; */
+  text-align: center;
+}
+
+.ModelDetails--name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px auto;
+  justify-content: center;
+}
+th,
+td {
+  padding: 10px 20px;
+  /* border: 1px solid black; */
+}
+
+th {
+  /* border-top: 1px solid black; */
+  display: flex;
+  /* border-right: 1px solid black; */
+}
+td {
+  border-left: 1px solid black;
+  /* border-right: 1px solid black; */
+  /* border-top: 1px solid black; */
+}
+tr {
+  border-top: 1px solid black;
+}
+
+th img {
+  height: 25px;
+  width: 25px;
+  margin: 0 5px;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+.pro {
+  background-color: #90e888;
+}
+.pro:hover {
+  background-color: #85d67e;
+}
+.con {
+  background-color: #ec5c5c;
+}
+.con:hover {
+  background-color: #de5757;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#visit {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  padding: 10px 20px;
+}
+
+#visit a {
+  margin-right: 5px;
+}
+
+.arrow-icon {
+  height: 20px;
+  width: auto;
+  vertical-align: middle;
+}
+@media screen and (max-width: 768px) {
+  .ModelDetails {
+    flex-direction: column;
+  }
+  .Model--img {
+    border-right: none;
+    width: 100%;
+  }
+}

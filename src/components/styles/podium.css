@@ -1,0 +1,71 @@
+#podium td {
+  vertical-align: bottom;
+  padding: 3px;
+  border: none;
+}
+#second,
+#first,
+#third {
+  width: 125px;
+}
+#first {
+  height: 300px;
+  background: #c98910;
+  background: gold;
+}
+#second {
+  height: 150px;
+  background: #a8a8a8;
+  background: silver;
+}
+#third {
+  height: 100px;
+  background: #965a38;
+}
+.text-center {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 900;
+}
+.text-inside {
+  text-align: center;
+  padding-top: 20px;
+}
+.player {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.points {
+  padding-top: 14px;
+  font-size: 14px;
+  display: block;
+}
+#podium tr {
+  border: none;
+}
+#podium {
+  margin: 0 auto;
+  border: none;
+}
+
+#podium tr:hover {
+  background-color: white;
+}
+
+.button {
+  background-color: black;
+  color: #fff;
+  border: 0;
+  width: 90%;
+  font-weight: 400;
+  padding: 0.5em 1.25em;
+  border-radius: 0.5em;
+  z-index: 999;
+  position: relative;
+  display: flex;
+  gap: 0.5em;
+  margin: 0 auto;
+}

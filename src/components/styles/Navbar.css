@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: Hacked;
+  src: url(https://hackedfont.com/HACKED.ttf);
+}
+
+.Navbar {
+  background-color: black;
+  color: white;
+  height: 100px;
+  padding: 0 20px;
+  z-index: 100;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+}
+
+.Logo li {
+  margin: 10px;
+}
+
+.Links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Links li {
+  margin: 10px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.Links li:hover {
+  font-weight: 200;
+}
+
+.Links li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 0;
+  background-color: #f01061;
+  transition: width 0.3s ease;
+}
+
+.Links li:hover::before {
+  width: 100%;
+}
+
+.logo-img {
+  height: 60px;
+  width: 60px;
+}
+
+.logo-text {
+  font-family: Hacked;
+  font-size: 55px;
+  letter-spacing: 1.5px;
+}
+
+#mobile-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 100px;
+  background-color: black;
+  color: white;
+}
+
+.lines-img {
+  height: 40px;
+  width: 40px;
+}
+
+@media screen and (max-width: 660px) {
+  #pc-nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 660px) {
+  #mobile-nav {
+    display: none;
+  }
+}
