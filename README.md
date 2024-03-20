@@ -1,7 +1,7 @@
 # Overview-
 This is an application that allows users to seamlessly navigate through multiple different AI-tools in the market and explore them further. The user experience is of utmost importance and hence the application is made to be interactive so that the user spends more time on the application. 
 
-#Technology Stack used-
+# Technology Stack used-
 - **JavaScript Framework:** React.js
 - **Major Plugins/Packages:**
   - **Vite:** For fast development server and optimized build.
@@ -10,10 +10,10 @@ This is an application that allows users to seamlessly navigate through multiple
   - **VantaJS:** To implement interactive and 3D visuals in the app.
   - **JSON Placeholder:** To make use of a mock API.
  
-#Page load time
+# Page load time
 The page load time is 987ms. This was measured using the Pingdom Speed test website.
 
-#Optimization efforts-
+# Optimization efforts-
 To optimize the webpage-
 1) Lazy loading was used so that the page doesn't stop until everything is downloaded.
 2) Unused JavaScript and CSS code was removed
