@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./styles/ModelDetails.css";
 import provider from "./images/provider.webp";
-import description from "./images/descr.png";
-import uses from "./images/uses.png";
-import pros from "./images/pro.png";
-import cons from "./images/con.png";
-import arrow from "./images/arrow.png";
+import description from "./images/descr.webp";
+import uses from "./images/uses.webp";
+import pros from "./images/pro.webp";
+import cons from "./images/con.webp";
+import arrow from "./images/arrow.webp";
 import { Blocks } from "react-loader-spinner";
 
 export default function ModelDetails() {
@@ -58,35 +58,35 @@ export default function ModelDetails() {
           <table>
             <tr>
               <th>
-                <img src={provider} alt="" />
+                <img src={provider} alt="provider icon" />
                 <span>Provider</span>
               </th>
               <td>{model.details.provider}</td>
             </tr>
             <tr>
               <th>
-                <img src={description} alt="" />
+                <img src={description} alt="description icon" />
                 <span>Description</span>
               </th>
               <td>{model.details.description}</td>
             </tr>
             <tr>
               <th>
-                <img src={uses} alt="" />
+                <img src={uses} alt="uses icon" />
                 <span>Uses</span>
               </th>
               <td>{model.details["use-cases"]}</td>
             </tr>
             <tr className="pro">
               <th>
-                <img src={pros} alt="" />
+                <img src={pros} alt="pros icon" />
                 <span>Pros</span>
               </th>
               <td>{model.details["pros"]}</td>
             </tr>
             <tr className="con">
               <th>
-                <img src={cons} alt="" />
+                <img src={cons} alt="cons icon" />
                 <span>Cons</span>
               </th>
               <td>{model.details["cons"]}</td>

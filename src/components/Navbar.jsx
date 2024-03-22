@@ -1,7 +1,6 @@
 import "./styles/Navbar.css";
 import { Link } from "react-router-dom";
-import logo from "./images/ai-logo.png";
-// import lines from "./images/lines.png";
+import logo from "./images/ai-logo.webp";
 
 function Navbar() {
   return (
@@ -10,7 +9,7 @@ function Navbar() {
         <ul>
           <div className="Logo">
             <li>
-              <img src={logo} className="logo-img"></img>
+              <img src={logo} alt="logo image" className="logo-img"></img>
             </li>
             <li>
               <h1 className="logo-text">NEXUSAI</h1>
@@ -24,7 +23,7 @@ function Navbar() {
         </ul>
       </nav>
       <nav id="mobile-nav">
-        <img src={logo} className="logo-img"></img>
+        <img alt="logo image" src={logo} className="logo-img"></img>
         <div className="Links">
           <li>
             <Link to="/">HOME</Link>

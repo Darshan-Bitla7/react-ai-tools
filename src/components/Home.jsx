@@ -2,10 +2,10 @@ import "./styles/Hero.css";
 import "./styles/Explore.css";
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import logo from "./images/ai-logo.png";
+import logo from "./images/ai-logo.webp";
 import NET from "vanta/src/vanta.net";
-import empty_heart from "./images/empty-heart.png";
-import filled_heart from "./images/filled-heart.png";
+import empty_heart from "./images/empty-heart.webp";
+import filled_heart from "./images/filled-heart.webp";
 import BasicPie from "./pie.jsx";
 import Podium from "./podium.jsx";
 
@@ -119,6 +119,7 @@ export default function Home() {
               src={model.favorite ? filled_heart : empty_heart}
               className="fav"
               alt=""
+              cursor="pointer"
               onClick={() => toggleFavorite(model.id)}
             />
           </article>
