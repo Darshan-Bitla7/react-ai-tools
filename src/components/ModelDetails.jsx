@@ -95,12 +95,12 @@ export default function ModelDetails() {
         </div>
       </div>
       <div className="button-container">
-        <button id="visit" className="explore-button">
-          <a target="_blank" href={model.details["link"]}>
+        <a target="_blank" href={model.details["link"]}>
+          <button id="visit" className="explore-button">
             Visit
-          </a>
-          <img src={arrow} alt="Arrow" className="arrow-icon" />
-        </button>
+            <img src={arrow} alt="Arrow" className="arrow-icon" />
+          </button>
+        </a>
       </div>
     </div>
   );

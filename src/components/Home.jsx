@@ -61,7 +61,7 @@ export default function Home() {
             clearInterval(interval);
           }
           iteration += 1 / 3;
-        }, 30);
+        }, 10);
       };
     }
   }, [titleRef]);

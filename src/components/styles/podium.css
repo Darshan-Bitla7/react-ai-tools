@@ -6,7 +6,8 @@
 #second,
 #first,
 #third {
-  width: 125px;
+  /* width: 125px; */
+  width: 100%;
 }
 #first {
   height: 300px;
