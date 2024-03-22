@@ -10,14 +10,19 @@ This is an application that allows users to seamlessly navigate through multiple
   - **VantaJS:** To implement interactive and 3D visuals in the app.
   - **JSON Placeholder:** To make use of a mock API.
  
-# Page load time
+# Page load time initially
 The page load time is 987ms. This was measured using the Pingdom Speed test website.
 
 # Optimization efforts-
 To optimize the webpage-
-1) Lazy loading was used so that the page doesn't stop until everything is downloaded.
-2) Unused JavaScript and CSS code was removed
-3) Tried to use smaller sized images.
+1) All the JavaScript and CSS files were refactored to remove redundant code.
+2) The Largest Contentful Paint element was reduced from 850kb to 18kb which boosted it's load time by 66%.
+3) Converted all static images from PNG to WEBP for faster downloads and lesser data consumption. Also tried to use smaller sized images.
+4) Implemented lazy loading in HTML for all the dynamic images to shorten the length of the critical rendering path, which translates into reduced page load times.
+5) All external dependencies were loaded through a CDN instead of bundling them with the application.
+
+# Final Page load time-
+The final page load time after optimization was 572ms as measured using the Pingdom Speed test website.
 
 # React + Vite
 
