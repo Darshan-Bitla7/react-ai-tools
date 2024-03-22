@@ -119,7 +119,6 @@ export default function Home() {
               src={model.favorite ? filled_heart : empty_heart}
               className="fav"
               alt=""
-              cursor="pointer"
               onClick={() => toggleFavorite(model.id)}
             />
           </article>
