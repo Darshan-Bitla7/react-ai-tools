@@ -1,8 +1,7 @@
 import "./styles/ModelDetails.css";
-// import PropTypes from "prop-types";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
-import "./styles/ModelDetails.css";
+import APIContext from "./APIContext";
 import provider from "./images/provider.webp";
 import description from "./images/descr.webp";
 import uses from "./images/uses.webp";
@@ -14,19 +13,12 @@ import { Blocks } from "react-loader-spinner";
 export default function ModelDetails() {
   const { id } = useParams();
   const [model, setModel] = useState(null);
+  const { models } = useContext(APIContext);
 
   useEffect(() => {
-    fetch(
-      `https://my-json-server.typicode.com/Darshan-Bitla7/mockapi/Models/${id}`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setModel(data);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, [id]);
+    const selectedModel = models.find((item) => item.id === parseInt(id));
+    setModel(selectedModel);
+  }, [id, models]);
 
   if (!model) {
     return (
@@ -105,7 +97,3 @@ export default function ModelDetails() {
     </div>
   );
 }
-
-// ModelDetails.propTypes = {
-//   model: PropTypes.node.isRequired,
-// };

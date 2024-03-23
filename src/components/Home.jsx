@@ -1,6 +1,6 @@
 import "./styles/Hero.css";
 import "./styles/Explore.css";
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useContext } from "react";
 import { Link } from "react-router-dom";
 import logo from "./images/ai-logo.webp";
 import NET from "vanta/src/vanta.net";
@@ -8,21 +8,11 @@ import empty_heart from "./images/empty-heart.webp";
 import filled_heart from "./images/filled-heart.webp";
 import BasicPie from "./pie.jsx";
 import Podium from "./podium.jsx";
+import APIContext from "./APIContext.jsx";
 
 export default function Home() {
-  const [models, setModels] = useState([]);
   const titleRef = useRef(null);
-
-  useEffect(() => {
-    fetch("https://my-json-server.typicode.com/Darshan-Bitla7/mockapi/Models")
-      .then((response) => response.json())
-      .then((data) => {
-        setModels(data);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, []);
+  const { models, toggleFavorite } = useContext(APIContext);
 
   useEffect(() => {
     NET({
@@ -72,12 +62,8 @@ export default function Home() {
       .scrollIntoView({ behavior: "smooth" });
   };
 
-  const toggleFavorite = (id) => {
-    setModels((prevModels) =>
-      prevModels.map((model) =>
-        model.id === id ? { ...model, favorite: !model.favorite } : model
-      )
-    );
+  const handleFavoriteClick = (id) => {
+    toggleFavorite(id);
   };
 
   return (
@@ -119,7 +105,7 @@ export default function Home() {
               src={model.favorite ? filled_heart : empty_heart}
               className="fav"
               alt=""
-              onClick={() => toggleFavorite(model.id)}
+              onClick={() => handleFavoriteClick(model.id)}
             />
           </article>
         ))}
