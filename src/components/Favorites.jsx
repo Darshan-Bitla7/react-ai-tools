@@ -24,32 +24,35 @@ export default function Favorites() {
     );
   } else {
     return (
-      <main id="explore">
-        {favorites.map((model) => (
-          <article key={model.id} className="card">
-            <Link to={`/model/${model.id}`}>
+      <>
+        <h1 className="explore-title">Favorite Models</h1>
+        <main id="explore">
+          {favorites.map((model) => (
+            <article key={model.id} className="card">
+              <Link to={`/model/${model.id}`}>
+                <img
+                  src={model.photo}
+                  alt={model.name}
+                  className="card--image"
+                  loading="lazy"
+                />
+                <div className="card--info">
+                  <h2 className="card--name">{model.name}</h2>
+                  <p className="card--contact">
+                    Provider: {model.details.provider}
+                  </p>
+                </div>
+              </Link>
               <img
-                src={model.photo}
-                alt={model.name}
-                className="card--image"
-                loading="lazy"
+                src={model.favorite ? filled_heart : empty_heart}
+                className="fav"
+                alt=""
+                onClick={() => handleFavoriteClick(model.id)}
               />
-              <div className="card--info">
-                <h2 className="card--name">{model.name}</h2>
-                <p className="card--contact">
-                  Provider: {model.details.provider}
-                </p>
-              </div>
-            </Link>
-            <img
-              src={model.favorite ? filled_heart : empty_heart}
-              className="fav"
-              alt=""
-              onClick={() => handleFavoriteClick(model.id)}
-            />
-          </article>
-        ))}
-      </main>
+            </article>
+          ))}
+        </main>
+      </>
     );
   }
 }
