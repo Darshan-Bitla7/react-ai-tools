@@ -1,0 +1,14 @@
+.nofav {
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+
+.nofav h1 {
+  font-family: "sf";
+  font-size: 2rem;
+}

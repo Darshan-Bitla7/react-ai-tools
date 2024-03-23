@@ -19,15 +19,23 @@ function Navbar() {
             <li>
               <Link to="/">HOME</Link>
             </li>
+            <li>
+              <Link to="/favorites">FAVORITES</Link>
+            </li>
           </div>
         </ul>
       </nav>
       <nav id="mobile-nav">
         <img alt="logo image" src={logo} className="logo-img"></img>
         <div className="Links">
-          <li>
-            <Link to="/">HOME</Link>
-          </li>
+          <ul>
+            <li>
+              <Link to="/">HOME</Link>
+            </li>
+            <li>
+              <Link to="/favorites">FAVORITES</Link>
+            </li>
+          </ul>
         </div>
       </nav>
     </>
