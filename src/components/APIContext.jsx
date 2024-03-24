@@ -7,7 +7,10 @@ export function APIContextProvider({ children }) {
   const [models, setModels] = useState([]);
 
   useEffect(() => {
-    fetch("https://my-json-server.typicode.com/Darshan-Bitla7/mockapi/Models")
+    // fetch("https://my-json-server.typicode.com/Darshan-Bitla7/mockapi/Models")
+    fetch(
+      "https://raw.githubusercontent.com/Darshan-Bitla7/mockapi/main/db2.json"
+    )
       .then((response) => response.json())
       .then((data) => {
         setModels(data);
