@@ -30,6 +30,9 @@ function Navbar() {
             <li>
               <Link to="/favorites">FAVORITES</Link>
             </li>
+            <li>
+              <Link to="/try">TRY</Link>
+            </li>
           </div>
         </ul>
       </nav>
@@ -51,6 +54,10 @@ function Navbar() {
             <hr />
             <li>
               <Link to="/favorites">FAVORITES</Link>
+            </li>
+            <hr />
+            <li>
+              <Link to="/try">TRY</Link>
             </li>
           </ul>
         </div>

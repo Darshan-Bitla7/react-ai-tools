@@ -1,0 +1,36 @@
+.try-title {
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+.try-title h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.text2image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  height: 90vh;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+.text2image input {
+  width: 80%;
+  height: 5vh;
+  margin: 2% auto;
+  padding: 1%;
+  font-size: 1.5rem;
+  border: 1px solid black;
+}
+
+.text2image img {
+  margin-top: 10px;
+  width: 35vmax;
+  height: auto;
+}
