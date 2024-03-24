@@ -1,14 +1,14 @@
 import "./styles/Hero.css";
 import "./styles/Explore.css";
-import { useEffect, useRef, useContext } from "react";
-import { Link } from "react-router-dom";
 import logo from "./images/ai-logo.webp";
 import NET from "vanta/src/vanta.net";
+import { useEffect, useRef, useContext, lazy, Suspense } from "react";
+import { Link } from "react-router-dom";
+import APIContext from "./APIContext.jsx";
 import empty_heart from "./images/empty-heart.webp";
 import filled_heart from "./images/filled-heart.webp";
-import BasicPie from "./pie.jsx";
-import Podium from "./podium.jsx";
-import APIContext from "./APIContext.jsx";
+const BasicPie = lazy(() => import("./pie.jsx"));
+const Podium = lazy(() => import("./podium.jsx"));
 
 export default function Home() {
   const titleRef = useRef(null);
@@ -110,8 +110,10 @@ export default function Home() {
           </article>
         ))}
       </main>
-      <BasicPie />
-      <Podium />
+      <Suspense fallback={<div>Loading...</div>}>
+        <BasicPie />
+        <Podium />
+      </Suspense>
     </>
   );
 }
