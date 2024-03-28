@@ -2,9 +2,6 @@ import { useState, useEffect } from "react";
 import "./styles/try.css";
 import { Blocks } from "react-loader-spinner";
 
-// import fetch from "node-fetch"; // Make sure to install 'node-fetch' package
-// Import stylesheets and other necessary imports
-
 const API_HOST = "https://api.stability.ai";
 const API_KEY = "sk-GKGW7iHzZRm70NnfTGrVMcrhB7D1SZ9BsmDPYe94zZsAMVHS";
 
@@ -76,7 +73,7 @@ const TextToImageConverter = () => {
   };
 
   return (
-    <>
+    <div className="try-body">
       <div className="try-title">
         <h1>
           <b>Stable-Diffusion-XL-base-1.0</b>
@@ -109,7 +106,7 @@ const TextToImageConverter = () => {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 };
 

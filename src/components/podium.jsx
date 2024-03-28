@@ -1,7 +1,28 @@
 import "./styles/podium.css";
+import { useEffect, useRef } from "react";
 import confetti from "https://esm.run/canvas-confetti@1";
 
 export default function Podium() {
+  const podiumRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const podium = podiumRef.current;
+      if (!podium) return;
+
+      const { top } = podium.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (top < windowHeight * 0.75) {
+        podium.classList.add("show");
+      } else {
+        podium.classList.remove("show");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+  }, []);
+
   function onClick() {
     confetti({
       particleCount: 250,
@@ -9,7 +30,7 @@ export default function Podium() {
     });
   }
   return (
-    <div className="podium">
+    <div className="podium" ref={podiumRef}>
       <table id="podium">
         <tr>
           <td>
@@ -26,7 +47,7 @@ export default function Podium() {
               <div className="text-inside">
                 <span className="player">ChatGPT</span>
                 <button className="button" onClick={onClick}>
-                  <span>Cheer 🎉</span>
+                  <span>CLICK 🎉</span>
                 </button>
               </div>
             </div>

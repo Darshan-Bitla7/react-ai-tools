@@ -1,3 +1,9 @@
+.try-body {
+  background-color: black;
+  color: white;
+  margin-top: -3%;
+  padding-bottom: 30px;
+}
 .try-title {
   text-align: center;
   margin-top: 3%;
@@ -9,6 +15,10 @@
   font-weight: 600;
 }
 .text2image {
+  background-color: #525252;
+  border-radius: 10px;
+  border: 2px solid lightgray;
+  box-shadow: 5px 5px 0px white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +36,9 @@
   margin: 2% auto;
   padding: 1%;
   font-size: 1.5rem;
+  border-radius: 8px;
   border: 1px solid black;
+  color: black;
 }
 
 .text2image img {

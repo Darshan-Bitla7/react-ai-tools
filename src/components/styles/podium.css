@@ -6,21 +6,31 @@
 #second,
 #first,
 #third {
-  /* width: 125px; */
   width: 100%;
+  transition: height 0.5s ease;
+  overflow: hidden;
+  height: 0;
+}
+
+.show #third {
+  height: 100px;
+}
+.show #second {
+  height: 150px;
+}
+.show #first {
+  height: 300px;
 }
 #first {
-  height: 300px;
+  min-height: 300px;
   background: #c98910;
   background: gold;
 }
 #second {
-  height: 150px;
   background: #a8a8a8;
   background: silver;
 }
 #third {
-  height: 100px;
   background: #965a38;
 }
 .text-center {
