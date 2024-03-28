@@ -24,15 +24,16 @@
 }
 #first {
   min-height: 300px;
-  background: #c98910;
-  background: gold;
+  background: linear-gradient(to bottom, #f3d281, #c98910);
+  box-shadow: 0 0 20px rgba(255, 215, 0);
 }
 #second {
-  background: #a8a8a8;
-  background: silver;
+  background: linear-gradient(to bottom, #c0c0c0, #a8a8a8);
+  box-shadow: 0 0 20px rgba(192, 192, 192);
 }
 #third {
-  background: #965a38;
+  background: linear-gradient(to bottom, #cd7f32, #965a38);
+  box-shadow: 0 0 20px rgba(205, 127, 50);
 }
 .text-center {
   text-align: center;
