@@ -7,9 +7,10 @@
 #first,
 #third {
   width: 100%;
-  transition: height 0.5s ease;
+  transition: height 1s ease;
   overflow: hidden;
   height: 0;
+  padding: 0 5px;
 }
 
 .show #third {
